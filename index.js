@@ -1,0 +1,1 @@
+getData('./products', generateProduct)

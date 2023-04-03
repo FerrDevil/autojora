@@ -1,0 +1,139 @@
+@import url(../cssModules/header.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+.checkoutBody{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 10vw;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 55vw;
+}
+.emptyCheckout{
+    display: none;
+    width: 40vw;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.checkoutItems{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+   
+    
+}
+.checkoutProduct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    column-gap: 0.5vw;
+
+}
+.checkoutProduct:hover{
+    background-color: #eee;
+}
+.checkoutProduct:hover .deleteCheckoutItem{
+    display: block;
+}
+.checkoutProductImg{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.checkoutProductName{
+    font-size: 1rem;
+}
+.deleteCheckoutItem{
+    display: none;
+    color: #999;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.deleteCheckoutItem:hover{
+    text-decoration: underline;
+}
+.checkoutPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1vh 1vw;
+}
+.checkoutSummary{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 3vh;
+    padding: 1vh 1vw;
+}
+.checkoutTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.totalPrice{
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-block;
+}
+.paymentType{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3vh;
+}
+.paymentInput{
+    padding: 0 0.5vw;
+    width: 16vw;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+.pay{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 1vw;
+    cursor: pointer;
+}
+.pay:hover{
+    border-color: #4169E1;
+    color: #4169E1;
+}
+

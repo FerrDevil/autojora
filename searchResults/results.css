@@ -1,0 +1,137 @@
+@import url(../cssModules/header.css);
+@import url(../cssModules/product.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    justify-content: flex-start;
+    column-gap: 5vw;
+    
+}
+.results{
+    padding: 5vh 1vw;
+}
+.searchPanel{
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-right: 1px solid #000;
+    padding: 5vh 2vw;
+
+}
+.searchPanelInput{
+    width: 15vw;
+    height: 30px;
+    border: 1px solid #000;
+    font-size: 1rem;
+    padding: 1px 5px;
+}
+.costsRange{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    row-gap: 10px;
+}
+.costsRange h1{
+    font-size: 1.3rem;
+}
+.costsRangeContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+}
+.costsRangeContainer::before{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 5px;
+    content: '';
+    width: 99%;
+    background-color: #cccccc;
+    border-radius: 2px;
+    height: 5px;
+    margin: 0 0.5%;
+
+}
+.curRange{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 5px;
+    content: '';
+    right: 0;
+    background-color: #4169E1;
+    border-radius: 2px;
+    height: 5px;
+    margin: 0 0.5%;
+
+}
+.range{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    appearance: none;
+    width: 100%;
+    background-color: transparent;
+    pointer-events: none;
+}
+.range::-webkit-slider-runnable-track{
+    appearance: none;
+    height: 20px;
+}
+.range::-webkit-slider-thumb{
+    appearance: none;
+    pointer-events: auto;
+    background-color: #0031c4;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 20px;
+}
+
+.rangeNumbers{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    padding: 0 5%;
+}
+.rangeValue{
+    position: relative;
+    width: 40%;
+    height: 20px;
+    border: 1px solid #000;
+}
+.rangeValueInput{
+    position: absolute;
+    right: 0;
+    width: 66%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+.rangeValueInput:focus{
+    outline: none;
+}
+.rangeNumbersDescr{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background-color: transparent;
+    color: rgb(88, 88, 88);
+}
+.products{
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vh 3vw;
+
+}

@@ -1,0 +1,67 @@
+@import url(cssModules/header.css);
+@import url(cssModules/product.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+main{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5vh;
+}
+.salesSlider{
+    position: relative;
+    width: 70vw;
+    height: 30vh;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sliderImgs{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: margin-left 1s;
+}
+.sliderImg{
+    width: 70vw;
+    height: 30vh;
+    object-fit: contain;
+}
+.sliderArrows{
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    
+}
+.arrow{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vh 2vw;
+    padding: 1vh 1vw;
+
+}
